@@ -1,0 +1,13 @@
+# Slot machine instructions
+
+
+0. Make a new file and call it slots.py
+1. Make a variable called money and have it start with the value 5
+2. Make a loop which will run 5 times,
+3. In the loop, Make a variable called bet and have it receive a value from the input function. (Hint: Make sure to wrap the input function in a float function, so we get a decimal number from it).
+4.     In the loop, make three variables: num1, num2, and num3. Have each receive a random value between 1 and 3, by calling the random.randint function. (Hint: you will need to add 'import random' to the top of the program)
+5.     In the loop, Check if num1 == num2 == num3. If it does:
+6.         Multiply the bet by 3 and add it to money. And print a victory message.
+7.     Otherwise:
+8.         Subtract the bet variable from the money variable. And print a lose message.
+9.     In the loop, Print the players current score

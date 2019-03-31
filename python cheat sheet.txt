@@ -1,0 +1,96 @@
+#### files ####
+
+file = open(<file_name>, <options>)  # options: r, a, w, +
+file = open('example.txt', 'w+')
+file = open('example.txt', 'r')
+
+string = file.read( <size> )
+lines = file.readlines()
+
+file.write( <string> )
+file.write("Example string of text.")
+file.writelines(lines)
+
+#### strings ####
+
+string.split(<delimiter>)
+string.split('.')
+
+string.replace(<substring>, <replacement_string>)
+string.replace('a', 'A')
+string.replace('.', '')  # Used to remove characters from a string
+
+string.lowercase()  /  string.uppercase()
+
+len(string) # length of a string
+
+string = "Hello World!"
+
+string[4]  # Get the FIFTH character (remember, indexing starts at 0)  -  'o'
+string[4:8]  # Get substring from  -  'o_Wo'
+string[4:]  # Get position 4 to end of the string  -  'o_World!'
+string[:8]  # Get 8 characters starting from the start  -  'Hello_Wo'
+
+#### functions ####
+
+len( <list_or_string_or_dictionary> )   # returns how many characters in a string, or how many items in a list, or how many items in a dictionary
+print("Example message.")  # Used to ONLY print something to the command line.
+input("Please enter a string. ")  # Used to print something to the command line AND wait for some input from the user.
+str( <number> )  # Converts a number to a string
+int( <string> )  # Converts a string to a number
+
+#### lists ####
+
+list = []
+list = [1, 3, 56, "Hello"]
+
+list[2]  # Get the THIRD element  -  56
+list[0]  # Get the FIRST element  -  1
+
+# Run through each element in a list (two ways)
+for item in list:
+
+for i in range(len(list))
+    item = list[i]
+
+list.reverse()
+list.pop( <index to remove> )
+list.pop(1)  # -> 3
+list.append( <item to append> )  # Adds an item to the end of the list
+list.insert( <position>, <item to insert>)  # Adds an item to a specific spot in the list
+len(list)  # How many items in the list
+
+# Check if an item is in a list
+if item in list:
+    # Found it
+else:
+    # Didn't find it
+
+#### dictionary ####
+
+dict = {}
+dict = {"Fruit":"Apple", "Veggie":"Carrot"}
+
+dict['Fruit']  # > 'Apple'  # Get value from a dictionary by key
+dict['Pasta'] = 'Spaghetti'  # Add key and value to a dictionary
+del dict['Pasta']  # Remove item from a dictionary
+
+len(dict)  # How many items in the dictionary  -  2
+
+# Run through all key-value pairs in a dictionary
+
+for k,v in dict.items():
+    print(k)  # Key
+    print(v)  # Value
+
+for k in dict:
+    print(k)  # Key
+    print(dict[k])  # Value
+
+# Check if a key is in a dictionary
+
+if key in dict:
+    # Found it
+else:
+    # Didn't find it
+

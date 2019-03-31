@@ -1,0 +1,10 @@
+# Multiplication program instructions
+
+
+0. Make a new file and call it mult.py
+1. Make a variable called total and have it start at 1
+2. Start a loop that will never stop, using the following:
+        while True:
+3.     In the loop, make a new variable called num and have it receive a value from the input function. (Hint: Make sure to wrap the input function in a float function, so we get a decimal number from it).
+4.     In the loop, multiply total by num
+5.     In the loop, print the current total

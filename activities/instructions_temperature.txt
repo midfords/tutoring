@@ -1,0 +1,8 @@
+# Temperature program instructions
+
+
+0. Make a new file and call it temp.py
+1. Make a variable called tempC and have it receive a value from the input function. (Hint: Make sure to wrap the input function in a float function, so we get a decimal number from it).
+2. Make a varaible called tempF and set it to equal the following math code:
+        tempC * 1.8 + 32
+3. Print the tempF variable
