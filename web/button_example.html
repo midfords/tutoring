@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button</title>
+</head>
+    <body>
+        <button id="myButton" onclick="buttonClicked()">Click me!</button>
+
+        <h2 id="myHeader"></h2>
+
+        <style>
+            #myButton {
+                padding: 15px 15px 15px 15px;
+                background-color: #418FF4;
+                color: white;
+                font-size: 16px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function buttonClicked() {
+                console.log('The button was clicked.')
+                document.getElementById("myHeader").innerText = "Hello World!"
+            }
+        </script>
+    </body>
+</html>
