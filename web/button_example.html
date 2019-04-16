@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Button</title>
-</head>
+    <head>
+        <title>Button</title>
+    </head>
     <body>
-        <button id="myButton" onclick="buttonClicked()">Click me!</button>
+        </br>
+        </br>
 
+        <div>
+            <input type="text" id="myInput" />
+        </div>
+
+        </br>
+        </br>
+        </br>
+
+        <div>
+            <button id="myButton" onclick="buttonClicked()">Click me!</button>
+            <button id="myButton2" onclick="buttonClicked2()">Don't click me!</button>
+        </div>
         <h2 id="myHeader"></h2>
 
         <style>
-            #myButton {
+            button {
                 padding: 15px 15px 15px 15px;
                 background-color: #418FF4;
                 color: white;
@@ -20,7 +33,12 @@
         <script type="text/javascript">
             function buttonClicked() {
                 console.log('The button was clicked.')
-                document.getElementById("myHeader").innerText = "Hello World!"
+                var t = document.getElementById("myInput").value
+                document.getElementById("myHeader").innerText = "Hello " + t + "!"
+            }
+
+            function buttonClicked2() {
+                document.getElementById("myHeader").innerText = "You weren't supposed to click that!"
             }
         </script>
     </body>
