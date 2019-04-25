@@ -94,3 +94,9 @@ if key in dict:
 else:
     # Didn't find it
 
+#### command line args ####
+
+import sys
+
+# The first arg is the file name
+sys.argv[0]
