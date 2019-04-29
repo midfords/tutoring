@@ -11,6 +11,16 @@ file.write( <string> )
 file.write("Example string of text.")
 file.writelines(lines)
 
+#### global variables ####
+myvar = "Global"
+
+def function():
+    global myvar # global keyword references myvar
+    myvar = "Changed"
+
+function()
+print(myvar) # prints 'Changed'
+
 #### strings ####
 
 string.split(<delimiter>)
