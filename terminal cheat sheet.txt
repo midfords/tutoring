@@ -10,47 +10,83 @@ cd - Change directory.
     $ cd xcode  # 'xcode' directory
     $ cd .. # Previous directory
 
-chmod - Change Mode.
+chmod - Change mode.
 
-chown - Change Owner.
+chown - Change owner.
 
-clear - Clear the terminal.
+clear - Clear terminal.
+    $ clear
 
 cp - Copy.
+    $ cp ./my_file ./my_file_copy  # Creates a copy of 'my_file' as 'my_file_copy'
 
 curl - Download web resources.
 
 exit - Exit current terminal session.
+    $ exit  # Exits current terminal or ssh session
 
 git - Manage git repositories.
+    $ git status  # Get working state
+    $ git add .  # Stage all changes
+    $ git commit -m "Message."  # Commit staged changes with message
+    $ git push  # Push new commits to remote repository
+    $ git pull  # Get new commits from remote repository
 
 grep - Search text.
+    $ ps aux | grep my_process  # Search processes for 'my_process'
 
 kill - Kill process by pid (process id).
 
 less - Read file.
 
 ls - List.
+    $ ls  # List visible items
+    $ ls -lah  # List all items, with details
 
-man - Manual.
+man - Manual. List information about command line tools.
+    $ man git  # List manual entry for git
 
-mkdir - Make Directory.
+mkdir - Make directory.
+    $ mkdir new_folder  # Make directory
 
-mv - Move.
+mv - Move or rename.
+    $ mv ./my_file ~/my_file  # Move file to home directory
+    $ mv ./my_file ./my_new_file  # Rename file
+
+psql - Postgres client.
+    > \list  -- List databases
+    > \q  -- Quit
+    > \dt  -- List tables
+    > \connect template1  -- Connect to database
+
+    > CREATE DATABASE db  -- Create a new database
 
 ps - List processes.
+    $ ps  # List processes
+    $ ps aux  # List all processes
 
 python - Run Python programs.
+    $ python my_program.py  # Run a python script
 
 reset - Reset terminal mode and clear.
+    $ reset
 
-rm - Delete.
+rm - Delete. Files do NOT go to trash bin.
+    $ rm my_file  # Delete 'my_file'
+    $ rm -r my_folder  # Recursive delete folder and all contents
+    $ rm -rf my_folder  # Recursive delete folder and all contents and ignore confirmation warnings
 
-ssh - Secure Shell, Connect to remote machines.
+source - Add a source file to shell.
+    $ source ~/.bashrc  # Add .bashrc to shell
 
-sudo - Super User Do, Use elevated privileges.
+ssh - Secure shell, connect to remote machines.
+    $ ssh username@192.168.0.1:22  # Connect to machine at '192.168.0.1' on port '22' with user 'username'
+
+sudo - Super user do, use elevated privileges.
+    $ sudo rm ./my_protected_file  # Deletes a file with elevated privileges
 
 touch - Create file.
+    $ touch my_new_file.txt  # Creates a new file 'my_new_file.txt'
 
 vi - Vim. Text editor.
     > i  # Insert mode
@@ -63,7 +99,7 @@ vi - Vim. Text editor.
 wget - Download web resources.
 
 | - Pipe.
-    & ps | grep zsh
+    & ps aux | grep zsh
 
 & - Link multiple terminal commands.
     $ cd ~ & touch .bashrc & vi .bashrc
