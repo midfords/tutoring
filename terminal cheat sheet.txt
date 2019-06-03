@@ -1,0 +1,69 @@
+brew - Package manager for OS X.
+    $ brew install git  # Install package (git)
+    $ brew uninstall git  # Uninstall package (git)
+    $ brew update  # Update installed packages
+    $ brew list  # List installed packages
+
+cd - Change directory.
+    $ cd ~  # Home directory
+    $ cd /  # Root directory
+    $ cd xcode  # 'xcode' directory
+    $ cd .. # Previous directory
+
+chmod - Change Mode.
+
+chown - Change Owner.
+
+clear - Clear the terminal.
+
+cp - Copy.
+
+curl - Download web resources.
+
+exit - Exit current terminal session.
+
+git - Manage git repositories.
+
+grep - Search text.
+
+kill - Kill process by pid (process id).
+
+less - Read file.
+
+ls - List.
+
+man - Manual.
+
+mkdir - Make Directory.
+
+mv - Move.
+
+ps - List processes.
+
+python - Run Python programs.
+
+reset - Reset terminal mode and clear.
+
+rm - Delete.
+
+ssh - Secure Shell, Connect to remote machines.
+
+sudo - Super User Do, Use elevated privileges.
+
+touch - Create file.
+
+vi - Vim. Text editor.
+    > i  # Insert mode
+    > ESC  # Command mode
+    > :q  # Quit
+    > :w  # Save
+    > :q!  # Quit without saving
+    > :wq  # Save and quit
+
+wget - Download web resources.
+
+| - Pipe.
+    & ps | grep zsh
+
+& - Link multiple terminal commands.
+    $ cd ~ & touch .bashrc & vi .bashrc
