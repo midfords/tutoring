@@ -57,6 +57,7 @@ psql - Postgres client.
     > \list  -- List databases
     > \q  -- Quit
     > \dt  -- List tables
+    > \du  -- List users
     > \connect template1  -- Connect to database
 
     > CREATE DATABASE db  -- Create a new database
