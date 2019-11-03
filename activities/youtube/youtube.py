@@ -134,6 +134,7 @@ def read_playlist_file(playlist_id):
     list
         a list of all the song items, formatted as [flag, video_id, title]
     """
+    pass
 
 def write_playlist_file(rows, playlist_id):
     """Writes in a csv file the playlist information and songs.
@@ -149,6 +150,7 @@ def write_playlist_file(rows, playlist_id):
     playlist_id : str
         The playlist id, used to find the csv file on disk.
     """
+    pass
 
 def find_added_items(master, new_items):
     """Compares the items from the new_items list and master list,
@@ -166,6 +168,7 @@ def find_added_items(master, new_items):
     list
         a list of all the added songs, formatted as (video_id, title)
     """
+    pass
 
 def find_missing_items(master, new_items):
     """Compares the items from the new_items list and master list,
@@ -183,6 +186,7 @@ def find_missing_items(master, new_items):
     list
         a list of all the missing songs, formatted as (video_id, title)
     """
+    pass
 
 def find_renamed_items(master, new_items):
     """Compares the items from the new_items list and master list,
@@ -200,6 +204,7 @@ def find_renamed_items(master, new_items):
     list
         a list of all the renamed songs, formatted as (video_id, old_title, new_title)
     """
+    pass
 
 def main():
     try:
@@ -207,7 +212,7 @@ def main():
         print_head_fetching(playlist, name)
     except:
         print_err_plnotfound(playlist)
-        continue
+        return
 
     master = read_playlist_file(playlist)
     new = fetch_playlist(playlist)
