@@ -1,3 +1,11 @@
+/**
+ * Largest Increasing Subsequence
+ * 
+ * Given a list of integers, determine the largest non-consecutive sequence.
+ * 
+ * Example: [1,2,7,3,4] -> 4
+ * Explanation: The largest increasing subsequence is 1,2,3,4
+ */
 
 public class LargestIncreasingSubsequence {
     public static void main(String[] args) {

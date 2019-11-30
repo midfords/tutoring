@@ -1,3 +1,16 @@
+/**
+ * Brackets
+ * 
+ * Given a string (or char array) of characters, determin if the parenthesis are valid.
+ * 
+ * Example: '(hello world)' -> true
+ * Example: '(hello (world))' -> true
+ * Explanation: Every opening parenthesis has a valid closing parenthesis.
+ * 
+ * Example: '(ab(cd' -> false
+ * Explanation: Every opening parenthesis does not have a corresponding closing parenthesis.
+ */
+
 import java.util.*;
 
 public class Brackets {

@@ -1,3 +1,13 @@
+/**
+ * Cycle Finder
+ * 
+ * Given a linked list, determine if there is a cycle present.
+ * 
+ * Example: (1)->(2)->(3)->null -> false
+ * Example: (1)->(2) -> true
+ *           ^----'
+ */
+
 import java.util.*;
 
 public class CycleFinder {

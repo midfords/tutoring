@@ -1,3 +1,14 @@
+/**
+ * Run Length Encode
+ * 
+ * Given a string of characters, generate and return an encoded string counting
+ * each of the sequential letters.
+ * 
+ * Example: 'aaaabbbc' -> 'a4b3c1'
+ * Explanation: 'aaaabbbc' has 4 repeated 'a's, 3 repeated 'b's and 1 repeated 'c'
+ * 
+ * Example: 'abc' -> 'a1b1c1'
+ */
 
 public class RunLengthEncode {
 

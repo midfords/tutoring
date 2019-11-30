@@ -1,3 +1,16 @@
+/**
+ * Third Last
+ * 
+ * Given a linked list return the third to last node. If there is no third to last
+ * node, return null.
+ * 
+ * Example: (1)->(2)->(3)->null -> 1
+ * Explanation: The last node is 3, second to last is 2 and third to last is 1.
+ * 
+ * Example: (1)->null -> null
+ * Explanation: Since there is no third to last node, we return null.
+ */
+
 import java.util.*;
 
 public class ThirdLast {

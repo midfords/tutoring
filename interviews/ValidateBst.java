@@ -1,3 +1,23 @@
+/**
+ * Validate BST
+ * 
+ * Given a binary tree, determine if it is a BST or not. A BST is a binary tree
+ * where all nodes in a left subtree are less than the value and all nodes in the
+ * right subtree are greater than the value.
+ * 
+ * Example:
+ *       4
+ *    2     6    -> true
+ *   1 3   5 7
+ *
+ * Example:
+ *       6
+ *    2     8    -> false
+ *   1 3   2 9
+ * Explanation: The right subtree contains a node '2' which is not greater than the
+ * root node '6', thus it is not a BST.
+ */
+
 import java.util.*;
 
 public class ValidateBst {

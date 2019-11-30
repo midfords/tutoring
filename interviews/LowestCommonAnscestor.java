@@ -1,4 +1,17 @@
-
+/**
+ * Lowest Common Anscestor
+ * 
+ * Given a binary, find the lowest common anscestor for two nodes.
+ *       4
+ *    2     6
+ *   1 3   5 7
+ *
+ * Example: 1,3 -> 2
+ * Explanation: The lowest common node for '1' and '3' is the parent node '2'.
+ * 
+ * Example: 1,5 -> 4
+ * Explanation: The lowest common node for '1' and '5' is the root node '4'.
+ */
 
 public class LowestCommonAnscestor {
     public static void main(String[] args) {

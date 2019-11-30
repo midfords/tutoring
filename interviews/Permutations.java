@@ -1,3 +1,12 @@
+/**
+ * Permutations
+ * 
+ * Given a string, print all permutations of the string including the empty string.
+ * The number of permutations should be the length of the string 2 ^ L
+ * 
+ * Example: 'abc' -> '', 'a', 'b', 'c', 'ab', 'ac', 'bc', 'abc'
+ */
+
 import java.lang.*;
 
 public class Permutations {

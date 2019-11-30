@@ -1,3 +1,12 @@
+/**
+ * Reverse List
+ * 
+ * Given a linked list, reverse the order of all nodes such that the tail becomes
+ * the new head and vice versa.
+ * 
+ * Example: (1)->(2)->(3)->null -> (3)->(2)->(1)->null
+ */
+
 import java.util.*;
 
 public class ReverseList {

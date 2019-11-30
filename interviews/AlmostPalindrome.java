@@ -1,3 +1,20 @@
+/**
+ * Almost Palindrome
+ * 
+ * Given a string of characters, write a function to determine
+ * if the string is an almost palindrome. An almost palindrome
+ * is a palindrome with exactly one extra character. The function
+ * should return true or false.
+ * 
+ * Example 1: 'aba' -> false
+ * Explanation: This is a complete palindrome.
+ *
+ * Example 2: 'abca' -> true
+ * Explanation: This is a palindrome differing by exactly one character 'c' or 'b'.
+ * 
+ * Example 3: 'abcd' -> false
+ * Explanation: There is no single character we can remove to make a palindrome.
+ */
 
 public class AlmostPalindrome {
     public static void main (String [] args) {

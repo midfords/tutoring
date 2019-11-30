@@ -1,4 +1,17 @@
-
+/**
+ * Longest Even Length
+ * 
+ * Given a string of integers, determine the longest substring where the sums
+ * of the first half and sums of the second half are equal.
+ * 
+ * Example: '123123' -> 6
+ * Explanation: The two halfs of the string are 123, the sum of each half is 6.
+ * since the sum of the first and second half are equal, the largest even substring
+ * is 6
+ *
+ * Example: '1538023' -> 4
+ * Explanation: '5380' where both halves sum to 8. The length of the substring is 4.
+ */
 
 public class LongestEvenLength {
 

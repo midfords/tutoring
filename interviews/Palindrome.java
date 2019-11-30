@@ -1,3 +1,12 @@
+/**
+ * Palindrome
+ * 
+ * Given a string of characters, determine if the string is a palindrome. A palindrome
+ * is a sequest that is the same forward and backward. For example: 'abcdcba'.
+ * 
+ * Example: 'aba' -> true
+ * Example: 'abc' -> false
+ */
 
 public class Palindrome {
     public static void main(String[] args) {

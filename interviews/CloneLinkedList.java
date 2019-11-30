@@ -1,4 +1,11 @@
-
+/**
+ * Clone Linked List
+ * 
+ * Given a linked list, write a function to produce and return a deep copy.
+ * 
+ * Example (1)->(2)->null -> (1)->(2)->null
+ * Example null -> null
+ */
 
 public class CloneLinkedList {
 

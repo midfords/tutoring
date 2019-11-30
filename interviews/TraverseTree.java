@@ -1,3 +1,13 @@
+/**
+ * Traverse Tree
+ * 
+ * Given a binary tree, print out each node in order from top to bottom, left to right.
+ * 
+ * Example:
+ *       4
+ *    2     6    -> 4,2,6,1,3,5,7
+ *   1 3   5 7
+ */
 
 public class TraverseTree {
 

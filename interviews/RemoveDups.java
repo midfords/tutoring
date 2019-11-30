@@ -1,3 +1,11 @@
+/**
+ * Remove Duplicates
+ * 
+ * Given a linked list, remove all duplicate nodes.
+ * 
+ * Example: (1)->(2)->(1)->null -> (1)->(2)->null
+ */
+
 import java.util.*;
 
 public class RemoveDups {

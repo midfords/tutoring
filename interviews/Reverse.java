@@ -1,3 +1,10 @@
+/**
+ * Reverse
+ * 
+ * Given a string, return the reversed string.
+ * 
+ * Example: 'abc' -> 'cba'
+ */
 
 public class Reverse {
 
