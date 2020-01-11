@@ -20,11 +20,7 @@ def isPrime(n):
     bool
         True if the number is prime, otherwise False.
     """
-    for i in range(2, n):
-        if n % i == 0:
-            return False;
-
-    return n > 0
+    pass
 
 
 if __name__ == "__main__":
