@@ -15,6 +15,9 @@ class TestReverse(unittest.TestCase):
     def test_word(self):
         pass
 
+    def test_short_word(self):
+        pass
+
     def test_phrase(self):
         pass
 
@@ -27,7 +30,7 @@ class TestReverse(unittest.TestCase):
     def test_runtime(self):
         test_string = "a" * 1000
         start = time.time()
-        title_formatter(test_string)
+        reverse(test_string)
         runtime = time.time() - start
 
         self.assertTrue(runtime < 1.0)

@@ -1,0 +1,24 @@
+Professional tutoring services for students or employees in the Ottawa/Gatineau area.
+
+I am an experienced software engineer with 10+ years of programming experience. I hold an Hon.B.Sc. in Computer Science and have worked at some of the most prestigious companies in the world including Amazon, Facebook and Google. I can help with computer science undergrad courses, personal development and technical interview preparation.
+
+I have a strong background in tutoring, including 8+ years of teaching private lessons, as well as employment as a teacher's assistant at the University of Manitoba for introductory computer courses.
+
+Common topics I cover are basic programming, object-oriented programming, algorithms and data structures, large application design, databases (relational and non-relational), testing, human computer interaction, mobile development, and web development. I mainly teach programming in the following languages: Java, Python, JavaScript, C/C++, C#. 
+
+uOttawa courses:
+
+ITI 1120 - Introduction to Computing
+ITI 1121 - Introduction to Computing II
+CSI 2110 - Data Structures and Algorithms
+CSI 2132 - Databases I
+
+Carleton courses:
+
+COMP 1405 - Introduction to Computer Science I
+COMP 1406 - Introduction to Computer Science II
+COMP 2402 - Abstract Data Types and Algorithms
+
+I offer tutoring services in person (Ottawa/Gatineau area only) or remotely over phone or Skype. Don't hesitate to contact me with any questions you have.
+
+Lessons are offered in English only.
