@@ -1,5 +1,5 @@
 #
-# Count A Tests
+# Count Numbers Tests
 #
 # Python tutoring exercise test cases.
 # Sean Midford, 2020
@@ -8,25 +8,37 @@
 import time
 import unittest
 
-from count_letter import count
+from count_numbers import count
 
-class TestCountA(unittest.TestCase):
+class TestCountNumbers(unittest.TestCase):
 
-    def test_lower(self):
+    def test_numbers(self):
         expected = 6
-        actual = count("aaaaaa")
+        actual = count("123456")
         
         self.assertEqual(expected, actual)
 
-    def test_upper(self):
-        expected = 8
-        actual = count("AAAAAAAA")
+    def text_all_numbers(self):
+        expected = 10
+        actual = count("0123456789")
+
+        self.assertEqual(expected, actual)
+
+    def text_duplicate_numbers(self):
+        expected = 6
+        actual = count("111111")
+
+        self.assertEqual(expected, actual)
+
+    def test_letters(self):
+        expected = 0
+        actual = count("AAAAAA")
         
         self.assertEqual(expected, actual)
 
     def test_random(self):
         expected = 5
-        actual = count("hfytaAFIDsaAAjfkd")
+        actual = count("hf1yta2AFI4Dsa5AAj3fkd")
         
         self.assertEqual(expected, actual)
 
@@ -37,7 +49,7 @@ class TestCountA(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_runtime(self):
-        test_string = "a" * 1000000
+        test_string = "0" * 1000000
         start = time.time()
         count(test_string)
         runtime = time.time() - start

@@ -8,7 +8,7 @@
 import time
 import unittest
 
-from csv_escape import csv_escape_2
+from csv_escape_2 import csv_escape
 
 class TestCsvEscape2(unittest.TestCase):
 
@@ -49,7 +49,7 @@ class TestCsvEscape2(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_runtime(self):
-        test_string = ["\"one\",two"] * 1000000
+        test_string = ["\"one\",two"] * 100000
         start = time.time()
         csv_escape(test_string)
         runtime = time.time() - start
