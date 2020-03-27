@@ -18,8 +18,8 @@ class TestSpellCheck(unittest.TestCase):
         path = os.path.dirname(os.path.abspath(__file__))
         words_path = os.path.join(path, 'words.txt')
 
-        with open(words_path, 'rb') as f:
-            self.words = set(f.readlines())
+        with open(words_path, 'r') as f:
+            self.words = set(f.read().splitlines())
 
     def test_valid(self):
         expected = 0
