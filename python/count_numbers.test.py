@@ -15,16 +15,16 @@ class TestCountNumbers(unittest.TestCase):
     def test_numbers(self):
         expected = 6
         actual = count("123456")
-        
+
         self.assertEqual(expected, actual)
 
-    def text_all_numbers(self):
+    def test_all_numbers(self):
         expected = 10
         actual = count("0123456789")
 
         self.assertEqual(expected, actual)
 
-    def text_duplicate_numbers(self):
+    def test_duplicate_numbers(self):
         expected = 6
         actual = count("111111")
 
@@ -33,13 +33,13 @@ class TestCountNumbers(unittest.TestCase):
     def test_letters(self):
         expected = 0
         actual = count("AAAAAA")
-        
+
         self.assertEqual(expected, actual)
 
     def test_random(self):
         expected = 5
         actual = count("hf1yta2AFI4Dsa5AAj3fkd")
-        
+
         self.assertEqual(expected, actual)
 
     def test_empty(self):
