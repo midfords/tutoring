@@ -61,7 +61,7 @@ class TestModList(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_runtime(self):
-        test_list = [4] * 1000000
+        test_list = [4] * 100000
         start = time.time()
         mod(test_list, 2)
         runtime = time.time() - start

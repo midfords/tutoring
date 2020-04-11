@@ -43,7 +43,7 @@ class TestDivideList(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_runtime(self):
-        test_list = [4] * 1000000
+        test_list = [4] * 100000
         start = time.time()
         divide(test_list)
         runtime = time.time() - start
