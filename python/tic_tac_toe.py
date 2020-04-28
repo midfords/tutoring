@@ -140,6 +140,7 @@ def play_game():
 
     piece = "o"
     while 1:
+        print_board(board)
         result = check_for_win(board)
 
         if result != 0:
