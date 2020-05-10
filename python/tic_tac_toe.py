@@ -60,9 +60,9 @@ def print_result(result: int):
     pass
 
 def get_position(board: List[List[str]]) -> (int, int):
-    """This function gets two integers, an x and y coordinate in the range of 1 to 3, 
+    """This function gets two integers, an x and y coordinate in the range of 0 to 2, 
     from the user. The function should stop the user from picking a position that has 
-    already been taken, or a position that is not in the range of 1 to 3, or if the user
+    already been taken, or a position that is not in the range of 0 to 2, or if the user
     enters in anything other than a number. For example, the board:
 
              | |x
@@ -73,7 +73,7 @@ def get_position(board: List[List[str]]) -> (int, int):
 
     should only allow the following possible coordinates: 
 
-        (1,1), (1,2), (2,1), (2,3), (3,2)
+        (0,0), (0,1), (1,0), (1,2), (2,1)
 
     Parameters
     ----------

@@ -79,30 +79,30 @@ class TestTicTacToe(unittest.TestCase):
         self.assertEqual(len(set(actual)), len(actual), 
             'Output did not differ for each result code.')
 
-    @patch('builtins.input', side_effect=['1', '2'])
+    @patch('builtins.input', side_effect=['0', '1'])
     def test_get_position(self, mock_input):
-        expected = (1,2)
+        expected = (0,1)
         actual = c.get_position([[" "," "," "],[" "," "," "],[" "," "," "]])
 
         self.assertEqual(expected, actual)
 
-    @patch('builtins.input', side_effect=['5', '1', '3'])
+    @patch('builtins.input', side_effect=['5', '0', '2'])
     def test_get_position_out_of_range(self, mock_input):
-        expected = (1,3)
+        expected = (0,2)
         actual = c.get_position([[" "," "," "],[" "," "," "],[" "," "," "]])
 
         self.assertEqual(expected, actual)
 
-    @patch('builtins.input', side_effect=['1', '1', '2', '2'])
+    @patch('builtins.input', side_effect=['0', '0', '1', '1'])
     def test_get_position_taken(self, mock_input):
-        expected = (2,2)
+        expected = (1,1)
         actual = c.get_position([["o"," "," "],[" "," "," "],[" "," "," "]])
 
         self.assertEqual(expected, actual)
 
-    @patch('builtins.input', side_effect=['$', '2', '3'])
+    @patch('builtins.input', side_effect=['$', '1', '2'])
     def test_get_position_invalid(self, mock_input):
-        expected = (2,3)
+        expected = (1,2)
         actual = c.get_position([[" "," "," "],[" "," "," "],[" "," "," "]])
 
         self.assertEqual(expected, actual)
@@ -134,7 +134,7 @@ class TestTicTacToe(unittest.TestCase):
 
     def test_check_for_win_diagonal(self):
         expected = 1
-        actual = c.check_for_win([["o","x"," "],[" ","o","x"],[" ","o","x"]])
+        actual = c.check_for_win([["o","x"," "],[" ","o","x"],[" ","x","o"]])
         
         self.assertEqual(expected, actual)
 
