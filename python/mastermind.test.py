@@ -150,8 +150,8 @@ class TestMastermind(unittest.TestCase):
         actual = mock_stdout.getvalue()
 
         self.assertGreater(len(actual), 0)
-        self.assertIn("\x1b[30m", actual[1])
-        self.assertIn("\x1b[37m", actual[1])
+        self.assertIn("\x1b[30m", actual)
+        self.assertIn("\x1b[37m", actual)
 
     @patch('sys.stdout', new_callable=StringIO)
     def test_print_result_white_only(self, mock_stdout):
@@ -159,7 +159,7 @@ class TestMastermind(unittest.TestCase):
         actual = mock_stdout.getvalue()
 
         self.assertGreater(len(actual), 0)
-        self.assertIn("\x1b[37m", actual[1])
+        self.assertIn("\x1b[37m", actual)
 
     @patch('sys.stdout', new_callable=StringIO)
     def test_print_result_empty(self, mock_stdout):
