@@ -88,15 +88,15 @@ def get_result(guess: (int, int, int, int), secret: (int, int, int, int)) -> Lis
     """
     pass
 
-def print_guess(guess: (int, int, int, int)):
-    """This function prints out the player's guess.
+def print_code(code: (int, int, int, int)):
+    """This function prints out a 4 value code with colours.
 
     Hint: use the print_piece function.
 
     Parameters
     ----------
-    guess : (int, int, int, int)
-        The player's guess.
+    code : (int, int, int, int)
+        The 4 value code.
     """
     pass 
 
@@ -146,19 +146,19 @@ def print_colours_menu():
     """
     pass
 
-def print_piece(colour: int, end: str = ""):
+def print_piece(colour: int, end: str = "\n"):
     colours = [
-        (Fore.RED, Back.BLACK), (Fore.GREEN, Back.BLACK),
-        (Fore.BLUE, Back.BLACK), (Fore.YELLOW, Back.BLACK),
-        (Fore.MAGENTA, Back.BLACK), (Fore.CYAN, Back.BLACK),
-        (Fore.BLACK, Back.WHITE), (Fore.WHITE, Back.BLACK) ]
+        (Fore.RED, Back.RESET), (Fore.GREEN, Back.RESET),
+        (Fore.BLUE, Back.RESET), (Fore.YELLOW, Back.RESET),
+        (Fore.MAGENTA, Back.RESET), (Fore.CYAN, Back.RESET),
+        (Fore.BLACK, Back.WHITE), (Fore.WHITE, Back.RESET) ]
 
     assert(colour > 0 and colour <= len(colours))
 
     i = colour - 1
     print(
         f"{colours[i][0]}{colours[i][1]}", "⬤ ", 
-        f"{Style.RESET_ALL}", " ", end, sep="")
+        f"{Style.RESET_ALL}", " ", end=end, sep="")
 
 def play_game():
     secret = create_secret()
@@ -167,13 +167,14 @@ def play_game():
     while 1:
         print_colours_menu()
         guess = get_guess()
-        print_guess(guess)
+        print_code(guess)
         result = get_result(guess, secret)
         print_result(result)
 
         result = check_for_win(guess, secret, turn)
         if result != 0:
             print_final_result(result)
+            print_code(secret)
             break
 
         turn += 1

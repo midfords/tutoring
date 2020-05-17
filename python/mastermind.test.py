@@ -119,18 +119,18 @@ class TestMastermind(unittest.TestCase):
         
         self.assertEqual(expected, actual)
 
-    def __call_print_guess(self, mock_stdout, guess):
-        m.print_guess(guess)
+    def __call_print_code(self, mock_stdout, guess):
+        m.print_code(guess)
         actual = mock_stdout.getvalue()
         mock_stdout.truncate(0)
         mock_stdout.seek(0)
         return actual
 
     @patch('sys.stdout', new_callable=StringIO)
-    def test_print_guess(self, mock_stdout):
+    def test_print_code(self, mock_stdout):
         actual = []
-        actual.append(self.__call_print_guess(mock_stdout, (1, 2, 3, 4)))
-        actual.append(self.__call_print_guess(mock_stdout, (5, 6, 7, 8)))
+        actual.append(self.__call_print_code(mock_stdout, (1, 2, 3, 4)))
+        actual.append(self.__call_print_code(mock_stdout, (5, 6, 7, 8)))
 
         self.assertGreater(len(actual[0]), 0)
         self.assertIn("\x1b[31m", actual[0])
