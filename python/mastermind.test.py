@@ -81,9 +81,9 @@ class TestMastermind(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
-    @patch('builtins.input', side_effect=['9', '1', '2', '0', '3', '3'])
+    @patch('builtins.input', side_effect=['9', '0', '1', '8', '0', '3', '3'])
     def test_get_guess_out_of_range(self, mock_input):
-        expected = (1, 2, 3, 3)
+        expected = (1, 8, 3, 3)
         actual = m.get_guess()
 
         self.assertEqual(expected, actual)
