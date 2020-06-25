@@ -6,7 +6,7 @@
 #
 import unittest
 from io import StringIO
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from hand import Hand
 from card import Card
@@ -55,45 +55,50 @@ class TestBlackjack(unittest.TestCase):
 
         self.assertIn("500", actual)
 
-    @patch('hand.Hand.get_total_value', return_value=18)
-    @patch('hand.Hand.get_total_value', return_value=17)
-    def test_check_for_win(self, player_mock, dealer_mock):
-        actual = b.check_for_win(player_mock, dealer_mock)
+    def __setup_hand_mock(self, total):
+        hand = Mock()
+        hand.get_total_value.return_value = total
+        return hand
+
+    def test_check_for_win(self):
+        player = self.__setup_hand_mock(18)
+        dealer = self.__setup_hand_mock(17)
+        actual = b.check_for_win(player, dealer)
 
         self.assertTrue(actual)
 
-    @patch('hand.Hand.get_total_value', return_value=18)
-    @patch('hand.Hand.get_total_value', return_value=19)
     def test_check_for_win_dealer(self, player_mock, dealer_mock):
-        actual = b.check_for_win(player_mock, dealer_mock)
+        player = self.__setup_hand_mock(18)
+        dealer = self.__setup_hand_mock(19)
+        actual = b.check_for_win(player, dealer)
 
         self.assertFalse(actual)
 
-    @patch('hand.Hand.get_total_value', return_value=18)
-    @patch('hand.Hand.get_total_value', return_value=18)
     def test_check_for_win_tie(self, player_mock, dealer_mock):
-        actual = b.check_for_win(player_mock, dealer_mock)
+        player = self.__setup_hand_mock(18)
+        dealer = self.__setup_hand_mock(18)
+        actual = b.check_for_win(player, dealer)
 
         self.assertFalse(actual)
 
-    @patch('hand.Hand.get_total_value', return_value=22)
-    @patch('hand.Hand.get_total_value', return_value=22)
     def test_check_for_win_bust(self, player_mock, dealer_mock):
-        actual = b.check_for_win(player_mock, dealer_mock)
+        player = self.__setup_hand_mock(22)
+        dealer = self.__setup_hand_mock(22)
+        actual = b.check_for_win(player, dealer)
 
         self.assertFalse(actual)
 
-    @patch('hand.Hand.get_total_value', return_value=18)
-    @patch('hand.Hand.get_total_value', return_value=22)
     def test_check_for_win_dealer_bust(self, player_mock, dealer_mock):
-        actual = b.check_for_win(player_mock, dealer_mock)
+        player = self.__setup_hand_mock(18)
+        dealer = self.__setup_hand_mock(22)
+        actual = b.check_for_win(player, dealer)
 
         self.assertTrue(actual)
 
-    @patch('hand.Hand.get_total_value', return_value=21)
-    @patch('hand.Hand.get_total_value', return_value=21)
     def test_check_for_win_blackjack(self, player_mock, dealer_mock):
-        actual = b.check_for_win(player_mock, dealer_mock)
+        player = self.__setup_hand_mock(21)
+        dealer = self.__setup_hand_mock(21)
+        actual = b.check_for_win(player, dealer)
 
         self.assertTrue(actual)
 

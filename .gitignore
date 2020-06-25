@@ -3,5 +3,7 @@
 *.gdoc
 *.class
 
+__pycache__/
+
 exams/
 python/saved_notes.txt
