@@ -149,8 +149,9 @@ class Computer(Player):
                 hit_flag, sunk_flag, ship = hit(point)
 
                 if sunk_flag:
-                    self.hit_count -= (ship.size + 1)
-                    if self.hit_count == 0:
+                    self.hit_count -= (ship.size - 1)
+                    if self.hit_count <= 0:
+                        self.hit_count = 0
                         self.priority = []
                 elif hit_flag:
                     self.hit_count += 1
