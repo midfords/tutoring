@@ -11,6 +11,7 @@ from board import BattleshipBoard
 def print_instructions():
     """This method prints all the instructions for the game.
     """
+    pass
 
 def print_status(player1_board: BattleshipBoard, player2_board: BattleshipBoard):
     """This method prints a status screen. It prints out both players' BattleshipBoards
@@ -23,6 +24,7 @@ def print_status(player1_board: BattleshipBoard, player2_board: BattleshipBoard)
     player2_board : BattleshipBoard
         Player 2's BattleshipBoard.
     """
+    pass
 
 def process_turn(player: Player, board: BattleshipBoard, opponent: BattleshipBoard):
     """Process the player's next turn. If the player hits a ship allow them to take another
