@@ -34,7 +34,7 @@ class BattleshipBoard:
         pass
 
     def __init_cell(self, hide_ship: bool) -> Cell:
-        """Helper method for __init__. Creates a cells and sets the hide_ship property.
+        """Helper method for __init__. Creates a cell and sets the hide_ship property.
         """
         pass
 
@@ -64,7 +64,7 @@ class BattleshipBoard:
 
         next_point = copy(point)
         PointConverter.increment_point(next_point, direction)
-        self.__place_ship_aux(next_point, direction, size, i - 1, points)
+        self.__place_ship(next_point, direction, size, i - 1, points)
 
         self.__board[point.x][point.y].ship = True
         return Ship(size, points)

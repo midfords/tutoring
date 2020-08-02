@@ -42,7 +42,7 @@ class Cell:
         Returns
         -------
         bool
-            The string representation of the object.
+            Whether the cell contains a ship.
         Raises
         ------
         ValueError

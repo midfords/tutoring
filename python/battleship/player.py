@@ -114,7 +114,7 @@ class Computer(Player):
             direction = self.__get_random_direction()
 
             if board.place_ship(point, direction, size):
-                break;
+                break
 
     def place_ships(self, sizes: List[int], board: BattleshipBoard):
         for size in sizes:
