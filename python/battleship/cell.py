@@ -49,3 +49,8 @@ class Cell:
             If the cell has already been hit.
         """
         pass
+
+    def reveal(self):
+        """This method reveals the ship on the cell. It should set the hide_ship flag to False.
+        """
+        pass
