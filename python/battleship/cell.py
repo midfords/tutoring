@@ -42,7 +42,7 @@ class Cell:
         Returns
         -------
         bool
-            Whether the cell contains a ship.
+            If the cell contains a ship.
         Raises
         ------
         ValueError

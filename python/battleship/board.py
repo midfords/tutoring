@@ -71,7 +71,8 @@ class BattleshipBoard:
 
     def place_ship(self, point: Point, direction: Direction, size: int):
         """Places a new ship on the board of a certain size. The ship placement starts at
-        the point (x and y) and moves in some direction (North, East, South or West).
+        the point (x and y) and moves in some direction (North, East, South or West). Add
+        the new ship to the list of ships.
 
         Hint: Use __place_ship method.
 
