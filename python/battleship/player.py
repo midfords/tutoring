@@ -17,7 +17,7 @@ from typing import List, Callable
 class Player(ABC):
 
     @abstractmethod
-    def place_ships(self, board: BattleshipBoard):
+    def place_ships(self, sizes: List[int], board: BattleshipBoard):
         pass
 
     @abstractmethod
@@ -57,12 +57,25 @@ class Human(Player):
         """
         pass
 
-    def place_ships(self, sizes: List[int], board: BattleshipBoard):
-        """Place each of the ships in the sizes list onto the BattleshipBoard. If the
-        user picks an invalid point or direction, prompt the user to re-enter the ship's
-        position and direction.
+    def __place_ship(self, size: int, board: BattleshipBoard):
+        """Place a ship onto the BattleshipBoard. If the user picks an invalid point or direction,
+        prompt the user to re-enter the ship's position and direction.
 
-        Hint: Use PointConverter.from_coordinate()
+        Hint: Use self.__get_direction() and self.__get_point()
+
+        Parameters
+        ----------
+        size : int
+            The ship size to place on the board.
+        board : BattleshipBoard
+            The board to place each ship onto.
+        """
+        pass
+
+    def place_ships(self, sizes: List[int], board: BattleshipBoard):
+        """Place each of the ships in the sizes list onto the BattleshipBoard.
+
+        Hint: Use self.__place_ship(size, board)
 
         Parameters
         ----------
