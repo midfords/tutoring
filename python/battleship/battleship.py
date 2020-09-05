@@ -72,8 +72,8 @@ def main():
     player1 = Human()
     player2 = Computer()
 
-    player1_board = BattleshipBoard()
-    player2_board = BattleshipBoard(hide_ships=True)
+    player1_board = BattleshipBoard(10)
+    player2_board = BattleshipBoard(10, hide_ships=True)
 
     sizes = [5, 4, 3, 2, 2]
     player1.place_ships(sizes, player1_board)

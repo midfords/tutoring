@@ -69,7 +69,7 @@ class BattleshipBoard:
         self.__board[point.x][point.y].ship = True
         return Ship(size, points)
 
-    def place_ship(self, point: Point, direction: Direction, size: int):
+    def place_ship(self, point: Point, direction: Direction, size: int) -> bool:
         """Places a new ship on the board of a certain size. The ship placement starts at
         the point (x and y) and moves in some direction (North, East, South or West). Add
         the new ship to the list of ships.
@@ -84,6 +84,10 @@ class BattleshipBoard:
             The direction the ship is being placed.
         size: int
             The size of the ship.
+        Returns
+        -------
+        bool
+            If the placement was successful
         """
         pass
 

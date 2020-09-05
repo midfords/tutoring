@@ -34,6 +34,9 @@ class Cell:
     def __indicator(self, hit: bool) -> str:
         return f"{Fore.RED}●{Style.RESET_ALL}" if hit else "●"
 
+    def is_ship(self) -> bool:
+        return self.__ship
+
     def shoot(self) -> bool:
         """Shoot the cell by setting the self.__hit variable to True. If the cell has already
         been shot before (self.__hit is already True), raise a ValueError. Return if the cell
