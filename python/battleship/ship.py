@@ -18,7 +18,7 @@ class Ship:
     def __init__(self, size: int, points: Set[Point]):
         self.__points = points
         self.__hit = set()
-        self.__size = size
+        self.size = size
 
     def __contains__(self, item: Point):
         return item in self.__points and item not in self.__hit
@@ -27,7 +27,7 @@ class Ship:
         return len(self.__points - self.__hit)
 
     def __str__(self):
-        return Ship.__SHIP_NAMES[self.__size]
+        return Ship.__SHIP_NAMES[self.size]
 
     def hit(self, point: Point):
         """Hit the ship at a certain point. If the point is in the ship, add that point

@@ -113,10 +113,7 @@ class Computer(Player):
         self.turns = 0
 
     def __get_random_point(self) -> Point:
-        while 1:
-            x, y = random.randint(0, 9), random.randint(0, 9)
-            if (x + y) % 2 == 0:
-                return Point(x, y)
+        return Point(random.randint(0, 9), random.randint(0, 9))
 
     def __get_random_direction(self) -> Direction:
         return random.choice(list(Direction))
@@ -150,7 +147,10 @@ class Computer(Player):
 
     def __get_next_turn(self) -> (Direction, Point):
         if len(self.priority) == 0:
-            return (None, self.__get_random_point())
+            while 1:
+                point = self.__get_random_point()
+                if (point.x + point.y) % 2 == 0:
+                    return (None, point)
         else:
             return self.priority.pop(0)
 
