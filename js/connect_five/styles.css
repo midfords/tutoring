@@ -1,0 +1,16 @@
+table, tr, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 8px;
+}
+
+.piece {
+  float: left;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+}
